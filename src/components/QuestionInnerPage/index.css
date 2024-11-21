@@ -55,7 +55,7 @@
     padding: 1rem;
     margin-top: 2rem;
     max-height: 300px;
-    overflow-y: scroll  ;
+    overflow-y: auto;
 }
 
 .friends-answers-container{
@@ -138,4 +138,10 @@
     color: white;
     border: none;
     margin-left: 1.5rem;
+}
+
+@media (min-width: 767px){
+    .answers-container{
+        max-height: 360px;
+    }
 }
