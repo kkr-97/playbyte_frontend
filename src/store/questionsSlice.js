@@ -5,15 +5,15 @@ const questionSlice = createSlice({
   name: "questions",
   initialState: {
     questions,
-    currentQuestion: {},
+    selectedQuestion: {},
   },
   reducers: {
     onSelectQuestion: (state, action) => {
-      state.currentQuestion = action.payload;
+      state.selectedQuestion = action.payload;
     },
   },
 });
 
-export const { onSelectQuestion } = questionSlice.actions;
+export const { onSelectQuestion, onAddAnswers } = questionSlice.actions;
 
 export default questionSlice.reducer;

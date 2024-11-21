@@ -1,0 +1,141 @@
+.control-container{
+    display: flex;
+    align-items:center;
+    padding: 1.5rem 1.5rem 1.5rem 1rem;
+    justify-content: space-between;
+}
+
+.control-container h1{
+    color: #6E6E6E;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    align-self: center;
+}
+
+.bi-chevron-left{
+    cursor: pointer;
+}
+
+.hero-container{
+    background-color: #ACD3FF;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.hero-container .detail-question{
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: #002B5E;
+}
+
+.hero-sub-container{
+    border: 1px solid #81B9FA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+    width: 90%;
+    margin: auto;
+    margin-top: -1rem;
+    background-color: #EAF4FF;
+    border-radius: 10px;
+    color: #394452;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.answers-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 2rem;
+    max-height: 300px;
+    overflow-y: scroll  ;
+}
+
+.friends-answers-container{
+    margin-bottom: 1.2rem;
+    
+}
+
+.friend-profile-ans-container, .my-profile-ans-container{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.4rem;
+}
+
+.friend-ans-container, .my-ans-container{
+    background-color: #efefef;
+    padding: .4rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    width: 85%;
+}
+
+.friend-ans-container .name{
+    color: #ff6363;
+    font-size: .6rem;
+}
+
+.answer{
+    line-height: 1.4rem;
+}
+
+.profile-img{
+    margin-right: .4rem;
+    margin-top: .4rem;
+    height: 22px;
+}
+
+
+.my-profile-ans-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.my-ans-par-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.my-ans-container{
+    background-color: #4592EC;
+    color: white;
+}
+
+.my-ans-container .name{
+    font-size: .6rem;
+    color: #ffffff70
+}
+
+.question-detail-page .form-container{
+    display: flex;
+     flex-direction: row;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+}
+
+.answer-input{
+    border: none;
+    border-radius: 10px;
+    background-color: #EDF2F7;
+    padding: 1rem;
+    width: auto;
+    flex-grow: 1;
+}
+
+.submit-btn{
+    background-color: #4592EC;
+    border-radius: 50%;
+    padding: .5rem;
+    cursor: pointer;
+    color: white;
+    border: none;
+    margin-left: 1.5rem;
+}
