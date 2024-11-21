@@ -21,9 +21,12 @@ function Login() {
     setShowPass(!showPass);
   };
 
-  const validatePassword = () => {
+  const validateUserNameAndPassword = () => {
     let errors = [];
 
+    if (!/^[A-Za-z]+$/.test(username)) {
+      errors.push("Username should only contain letters");
+    }
     if (password.length < 8) {
       errors.push("Password must be at least 8 characters long.");
     }
@@ -47,7 +50,7 @@ function Login() {
     if (username === "" || password === "") {
       setErrorMsgs(["Please fill in all fields"]);
     } else {
-      if (validatePassword()) {
+      if (validateUserNameAndPassword()) {
         dispatch(onSuccessfulLogin(username));
         navigate("/", { replace: true });
       }
