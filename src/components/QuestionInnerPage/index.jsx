@@ -65,6 +65,7 @@ function QuestionInnerPage() {
 
   const onSubmitForm = (e) => {
     e.preventDefault();
+    if (myAnsInput === "") return;
     setMyAnswers((prevState) => [...prevState, myAnsInput]);
     setMyAnswerInput("");
   };
@@ -139,7 +140,11 @@ function QuestionInnerPage() {
                 className="answer-input"
                 placeholder="Type a message"
               />
-              <button type="submit" className="submit-btn">
+              <button
+                type="submit"
+                disabled={myAnsInput.length === 0}
+                className="submit-btn"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
