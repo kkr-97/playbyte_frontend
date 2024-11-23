@@ -1,3 +1,9 @@
+.question-detail-page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .control-container{
     display: flex;
     align-items:center;
@@ -54,8 +60,8 @@
     flex-direction: column;
     padding: 1rem;
     margin-top: 2rem;
-    max-height: 300px;
     overflow-y: auto;
+    flex-grow: 1;
 }
 
 .friends-answers-container{
@@ -138,10 +144,4 @@
     color: white;
     border: none;
     margin-left: 1.5rem;
-}
-
-@media (min-width: 767px){
-    .answers-container{
-        max-height: 360px;
-    }
 }
