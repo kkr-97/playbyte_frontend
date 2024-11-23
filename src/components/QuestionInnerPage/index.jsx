@@ -121,7 +121,7 @@ function QuestionInnerPage() {
                 </svg>
               </div>
             </div>
-            <div className="flex-grow-1 overflow-scroll">
+            <div className="flex-grow-1 overflow-y-auto">
               <div className="answers-container">
                 <div className="friends-answers-container">
                   {friends_answers.map((item, index) => (
