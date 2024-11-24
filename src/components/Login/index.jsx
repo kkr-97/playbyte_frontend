@@ -26,17 +26,13 @@ function Login() {
 
     if (!/^[A-Za-z]+$/.test(username)) {
       errors.push("Username should only contain letters");
-    }
-    if (password.length < 8) {
+    } else if (password.length < 8) {
       errors.push("Password must be at least 8 characters long.");
-    }
-    if (!/[A-Z]/.test(password)) {
+    } else if (!/[A-Z]/.test(password)) {
       errors.push("Password must include at least one uppercase letter.");
-    }
-    if (!/[0-9]/.test(password)) {
+    } else if (!/[0-9]/.test(password)) {
       errors.push("Password must include at least one number.");
-    }
-    if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+    } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
       errors.push("Password must include at least one special character.");
     }
 
@@ -100,13 +96,12 @@ function Login() {
                 }
               ></i>
             </div>
-            {errorMsgs.length > 0 &&
-              errorMsgs.map((err, index) => (
-                <p key={index} className="err-msg mb-1">
-                  *{err}
-                </p>
-              ))}
-            <button className="btn login-btn">LOGIN</button>
+
+            <p className="err-msg mb-1">
+              {errorMsgs.length > 0 && errorMsgs[0]}
+            </p>
+
+            <button className="login-btn">LOGIN</button>
           </form>
         </div>
       </div>

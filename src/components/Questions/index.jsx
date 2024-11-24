@@ -18,8 +18,8 @@ function Questions() {
   return (
     isAuthenticated && (
       <div className="container ">
-        <div className="row">
-          <header className="col-12">
+        <div className="row questions-container">
+          <header className="col-12 nav-container">
             <h1 className="ques-head">QUESTIONS</h1>
           </header>
           <hr />

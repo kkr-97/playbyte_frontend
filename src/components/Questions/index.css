@@ -24,3 +24,19 @@ hr{
     list-style-type: none;
     padding: 0;
 }
+
+/* .questions-container{
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+} */
+
+.prev-questions-container{
+    margin-top: 64px;
+}
+
+.nav-container{
+    position: fixed;
+    top:0;
+    background-color: #fff;
+}

@@ -3,11 +3,7 @@ export const questions = [
     question:
       "If you could have any fictional character as a roommate, who would it be and why?",
     answeredCnt: 55,
-    answeredByAvatars: [
-      "/images/Icon1.png",
-      "/images/Icon2.png",
-      "/images/Icon3.png",
-    ],
+    answeredByAvatars: ["/images/Icon1.png", "/images/Icon2.png"],
     friends_answers: [
       {
         name: "John Smith",

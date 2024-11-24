@@ -1,5 +1,6 @@
 .question-item{
     display: flex;
+    flex-direction: column;
     border: 0.3px solid #d2d2d2;
     border-radius: 10px;
     cursor: pointer;
@@ -26,7 +27,7 @@
     flex-grow: 1;
 }
 
-.question-container .question{
+.quest-img-container .question{
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -35,6 +36,7 @@
     display: flex;
     margin-top: 1rem;
     justify-content: space-between;
+    align-self: flex-end;
 }
 
 .response{
@@ -50,6 +52,11 @@
 }
 
 .avatars-container{
+    display: flex;
+    align-items: center;
+}
+
+.quest-img-container{
     display: flex;
     align-items: center;
 }

@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import "./index.css";
 
 function QuestionInnerPage() {
-  const [myAnsInput, setMyAnswerInput] = useState("");
   const [my_answers, setMyAnswers] = useState([]);
 
   const navigate = useNavigate();
@@ -59,15 +58,56 @@ function QuestionInnerPage() {
     );
   };
 
-  const onChangeMyAnswer = (e) => {
-    setMyAnswerInput(e.target.value);
-  };
+  const InputComponent = () => {
+    const [myAnsInput, setMyAnswerInput] = useState("");
 
-  const onSubmitForm = (e) => {
-    e.preventDefault();
-    if (myAnsInput === "") return;
-    setMyAnswers((prevState) => [...prevState, myAnsInput]);
-    setMyAnswerInput("");
+    const onChangeMyAnswer = (e) => {
+      setMyAnswerInput(e.target.value);
+    };
+
+    const onSubmitForm = (e) => {
+      e.preventDefault();
+      if (myAnsInput === "") return;
+      setMyAnswers((prevState) => [...prevState, myAnsInput]);
+      setMyAnswerInput("");
+
+      document
+        .getElementById("ansContainer")
+        .scrollIntoView({ behavior: "smooth", block: "end" });
+    };
+
+    return (
+      <div className="col-12 p-3">
+        <form className="form-container" onSubmit={onSubmitForm}>
+          <input
+            type="text"
+            value={myAnsInput}
+            onChange={onChangeMyAnswer}
+            className="answer-input"
+            placeholder="Type a message"
+          />
+          <button
+            type="submit"
+            disabled={myAnsInput.length === 0}
+            className="submit-btn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="bi bi-chevron-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    );
   };
 
   return (
@@ -122,7 +162,7 @@ function QuestionInnerPage() {
               </div>
             </div>
             <div className="flex-grow-1 overflow-y-auto">
-              <div className="answers-container">
+              <div className="answers-container" id="ansContainer">
                 <div className="friends-answers-container">
                   {friends_answers.map((item, index) => (
                     <FriendAns key={index} details={item} />
@@ -134,36 +174,7 @@ function QuestionInnerPage() {
               </div>
             </div>
             <hr />
-            <div className="col-12 p-3">
-              <form className="form-container" onSubmit={onSubmitForm}>
-                <input
-                  type="text"
-                  value={myAnsInput}
-                  onChange={onChangeMyAnswer}
-                  className="answer-input"
-                  placeholder="Type a message"
-                />
-                <button
-                  type="submit"
-                  disabled={myAnsInput.length === 0}
-                  className="submit-btn"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    className="bi bi-chevron-right"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
-                    />
-                  </svg>
-                </button>
-              </form>
-            </div>
+            <InputComponent />
           </div>
         </div>
       </div>

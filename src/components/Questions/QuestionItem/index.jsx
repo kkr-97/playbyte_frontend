@@ -18,29 +18,29 @@ function QuestionItem({ details, index }) {
   return (
     <li className="col-12" onClick={onClickQuestion}>
       <div className="question-item">
-        <div className="img-container">
-          <img
-            src="images/interaction-img.png"
-            alt="interaction image"
-            className="interaction-img"
-          />
-        </div>
-        <div className="question-container">
+        <div className="quest-img-container">
+          <div className="img-container">
+            <img
+              src="images/interaction-img.png"
+              alt="interaction image"
+              className="interaction-img"
+            />
+          </div>
           <h1 className="question">{question}</h1>
-          <div className="responses-container">
-            <p className="response">
-              <span>{answeredCnt} of your friends</span> answered this question
-            </p>
-            <div className="avatars-container">
-              {answeredByAvatars.map((imgLink, index) => (
-                <img
-                  key={index}
-                  src={imgLink}
-                  className="response-avatar"
-                  alt="avatar"
-                />
-              ))}
-            </div>
+        </div>
+        <div className="responses-container">
+          <p className="response">
+            <span>{answeredCnt} of your friends</span> answered this question
+          </p>
+          <div className="avatars-container ms-2">
+            {answeredByAvatars.map((imgLink, index) => (
+              <img
+                key={index}
+                src={imgLink}
+                className="response-avatar"
+                alt="avatar"
+              />
+            ))}
           </div>
         </div>
       </div>
