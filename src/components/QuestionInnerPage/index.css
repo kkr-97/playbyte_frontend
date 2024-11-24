@@ -23,7 +23,7 @@
     cursor: pointer;
 }
 
-.hero-container{
+.question-detail-page .hero-container{
     background-color: #ACD3FF;
     display: flex;
     align-items: center;

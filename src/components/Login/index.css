@@ -5,9 +5,10 @@
     background-color: #fff;
     justify-content: center;
     align-items: center;
-    padding: 32px;
+    /* padding: 32px; */
     background-size: cover;
-    height: 70vh;
+    height: 65vh;
+    width: 100vw;
 }
 
 .main-header{
