@@ -32,11 +32,12 @@ hr{
 } */
 
 .prev-questions-container{
-    margin-top: 64px;
+    margin-top: 58px;
 }
 
 .nav-container{
     position: fixed;
     top:0;
+    z-index: 10;
     background-color: #fff;
 }

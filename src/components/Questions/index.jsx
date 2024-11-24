@@ -19,7 +19,7 @@ function Questions() {
     isAuthenticated && (
       <div className="container ">
         <div className="row questions-container">
-          <header className="col-12 nav-container">
+          <header className="col-12 nav-container border-bottom">
             <h1 className="ques-head">QUESTIONS</h1>
           </header>
           <hr />
