@@ -55,8 +55,8 @@ function Login() {
 
   return (
     <div className="container p-0 login-page">
-      <div className="row">
-        <div className="col-12 col-md-6">
+      <div className="row p-0">
+        <div className="col-12 col-md-6 p-0">
           <div className="hero-container">
             <h1 className="main-header">
               Know Your <br />
