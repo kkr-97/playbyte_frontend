@@ -7,8 +7,9 @@
     align-items: center;
     /* padding: 32px; */
     background-size: cover;
-    height: 65vh;
-    width: 100vw;
+    background-position: center;
+    border-radius: 0 0 50% 50%;
+    height: 530px;
 }
 
 .main-header{
@@ -23,8 +24,8 @@
 }
 
 .login-friends-img{
-    height: 300px;
-    width: 280px;
+    height: 260px;
+    width: 240px;
 }
 
 form{
@@ -80,4 +81,11 @@ input{
 i{
     color: #4592EC;
     cursor: pointer;
+}
+
+@media (max-width: 767px){
+    .login-page .hero-container{
+        border-radius: 0;
+        width: 100vw;
+    }
 }
